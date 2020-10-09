@@ -72,12 +72,13 @@ public class KilitSistemi : MonoBehaviour
 
     public void levelAc(int id)//buton üzerinden gelen id ye göre level açılıyor
     {
-        PlayerPrefs.SetString("suankiSecilenLevel", levelAdi(id));
+        //PlayerPrefs.SetString("suankiSecilenLevel", levelAdi(id));
         SceneManager.LoadScene(levelAdi(id));
     }
 
     public void sıfırlama() //Levelleri Sıfırlama
     {
+        PlayerPrefs.DeleteKey("yildizlar");
         PlayerPrefs.DeleteKey("level");
         PlayerPrefs.DeleteKey("suankiSecilenLevel");
         PlayerPrefs.DeleteKey("seviyeSayisi");
